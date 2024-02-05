@@ -47,7 +47,7 @@ resource "aws_rds_cluster" "main" {
   skip_final_snapshot              = var.skip_final_snapshot
   tags                             = merge(local.tags, { Name = "${local.name_prefix}-cluster" })
   storage_encrypted                = true
-  kms_key_id                       = var.kms_key_id
+#  kms_key_id                       = var.kms_key_id
 }
 
 resource "aws_rds_cluster_instance" "cluster_instances" {
